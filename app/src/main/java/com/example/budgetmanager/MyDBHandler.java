@@ -15,8 +15,8 @@ public class MyDBHandler extends SQLiteOpenHelper {
 
 
     private static final int DATABASE_VERSION = 1;
-    private static final String DATABASE_NAME = "moneyManager.db";
-    private static final String TABLE_NAME = "moneyManager";
+    private static final String DATABASE_NAME = "finalBudget.db";
+    private static final String TABLE_NAME = "finalBudget";
 
     private static final String COLUMN_1 = "[date]";
     private static final String COLUMN_2 = "amount";
@@ -56,7 +56,7 @@ public class MyDBHandler extends SQLiteOpenHelper {
 
     public Cursor getData() {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("select * from moneyManager", null);
+        Cursor cursor = db.rawQuery("select * from finalBudget", null);
         return cursor;
     }
 }

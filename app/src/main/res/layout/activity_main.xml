@@ -8,6 +8,31 @@
     tools:context=".MainActivity">
 
 
+    <CheckBox
+        android:id="@+id/onlySubtracted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Only Subtracted"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.715"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
+
+    <Button
+        android:id="@+id/maxAmtBtn"
+        android:layout_width="108dp"
+        android:layout_height="35dp"
+        android:text="Set Max Amt"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.92" />
+
     <EditText
         android:id="@+id/balanceAmount"
         android:layout_width="122dp"
@@ -43,6 +68,78 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.186"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/minDate"
+        android:layout_width="106dp"
+        android:layout_height="43dp"
+        android:autofillHints=""
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Min. Date"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.715"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/maxDate"
+        android:layout_width="106dp"
+        android:layout_height="43dp"
+        android:autofillHints=""
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Max. Date"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.715"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/minPrice"
+        android:layout_width="106dp"
+        android:layout_height="43dp"
+        android:autofillHints=""
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Min. Amount"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.86"
+        tools:targetApi="o" />
+
+    <EditText
+        android:id="@+id/maxPrice"
+        android:layout_width="106dp"
+        android:layout_height="43dp"
+        android:autofillHints=""
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Max. Amount"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.859"
         tools:targetApi="o" />
 
     <EditText
@@ -121,6 +218,7 @@
         app:layout_constraintVertical_bias="0.079" />
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="338dp"
         android:layout_height="115dp"
         android:layout_marginStart="4dp"
@@ -135,7 +233,7 @@
         app:layout_constraintHorizontal_bias="0.463"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.151">
+        app:layout_constraintVertical_bias="0.0">
 
         <TableLayout
             android:id="@+id/tableLayout"
@@ -179,17 +277,122 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="157dp"
-        android:layout_height="45dp"
+        android:layout_width="137dp"
+        android:layout_height="30dp"
         android:background="#FFF"
         android:gravity="center"
         android:text="HISTORY"
-        android:textSize="32sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.391" />
+        app:layout_constraintVertical_bias="0.369" />
+
+    <Button
+        android:id="@+id/maxDateBtn"
+        android:layout_width="108dp"
+        android:layout_height="35dp"
+        android:text="Set Max Date"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.781" />
+
+    <Button
+        android:id="@+id/minDateBtn"
+        android:layout_width="108dp"
+        android:layout_height="35dp"
+        android:text="Set Min Date"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.781" />
+
+    <Button
+        android:id="@+id/resetBtn"
+        android:layout_width="83dp"
+        android:layout_height="31dp"
+        android:background="#ed1818"
+        android:text="RESET"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.853"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.921" />
+
+    <Button
+        android:id="@+id/dateRangeBtn"
+        android:layout_width="94dp"
+        android:layout_height="42dp"
+        android:text="Set Range"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.864"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.715" />
+
+    <Button
+        android:id="@+id/overallBtn"
+        android:layout_width="83dp"
+        android:layout_height="34dp"
+        android:background="#26c751"
+        android:text="Overall Filter"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.853"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.78" />
+
+    <Button
+        android:id="@+id/amountRangeBtn"
+        android:layout_width="94dp"
+        android:layout_height="42dp"
+        android:text="Set Range"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.864"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.857" />
+
+    <Button
+        android:id="@+id/minAmtBtn"
+        android:layout_width="108dp"
+        android:layout_height="35dp"
+        android:text="Set Min Amt"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.92" />
+
+    <CheckBox
+        android:id="@+id/onlyAdded"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Only Added"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
